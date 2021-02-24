@@ -1,4 +1,4 @@
-n = int(input("Enter the limit:"))
+n = 3
 i = 0
 j = 1
 
@@ -25,38 +25,29 @@ def condition(choice):
             b = dictB["Book_cost"]
             c = dictC["Book_cost"]
             if (a > b) and (a > c):
-                print("a1:" + a)
                 if (b > c):
-                    print("b1:" + b)
                     print(dictC)
                     print(dictB)
                     print(dictA)
                 else:
-                    print("c1:" + c)
                     print(dictB)
                     print(dictC)
                     print(dictA)
             elif (b > a) and (b > c):
-                print("b2:" + b)
                 if (a > c):
-                    print("a2:" + a)
                     print(dictC)
                     print(dictA)
                     print(dictB)
                 else:
-                    print("c2:" + c)
                     print(dictA)
                     print(dictC)
                     print(dictB)
             elif (c > a) and (c > b):
-                print("c3:" + c)
                 if (a > b):
-                    print("a3:" + a)
                     print(dictB)
                     print(dictA)
                     print(dictC)
                 else:
-                    print("b3:" + b)
                     print(dictA)
                     print(dictB)
                     print(dictC)
@@ -135,24 +126,23 @@ def condition(choice):
 
 
 for i in range(0, n):
-    Author_name = input("Enter The Author_name:")
-    Book_name = input("Enter The Book_name:")
-    Book_version = input("Enter The Book_version:")
-    Pub_year = input("Enter The Pub_year:")
-    Book_cost = input("Enter The Book_cost in same digits:")
-    add = int(input("Enter the dict number:"));
-    if (add == 1):
+    Author_name = input("Enter The Author_name\t:\t")
+    Book_name = input("Enter The Book_name\t\t:\t")
+    Book_version = input("Enter The Book_version\t:\t")
+    Pub_year = input("Enter The Pub_year\t\t:\t")
+    Book_cost = int(input("Enter The Book_cost\t:\t"))
+    if (i == 0):
         dictA = {"Author_name": Author_name, "Book_name": Book_name, "Book_version": Book_version, "Pub_year": Pub_year,
                  "Book_cost": Book_cost}
-    elif (add == 2):
+    elif (i == 1):
         dictB = {"Author_name": Author_name, "Book_name": Book_name, "Book_version": Book_version, "Pub_year": Pub_year,
                  "Book_cost": Book_cost}
-    elif (add == 3):
+    elif (i == 2):
         dictC = {"Author_name": Author_name, "Book_name": Book_name, "Book_version": Book_version, "Pub_year": Pub_year,
                  "Book_cost": Book_cost}
 
 print(
     "1. Enter Author Name\n2. Enter Price\n3. Enter Author Name and Year of Publishing\n4.Enter Author Name,Publishing Year for listing\n5.To Exit")
 while j == 1:
-    choice = int(input("Enter the choice:"))
+    choice = int(input("Enter the choice\t:\t"))
     condition(choice)
