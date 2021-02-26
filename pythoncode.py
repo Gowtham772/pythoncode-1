@@ -1,3 +1,26 @@
+#Problem Statement:
+#Write a Python program to create a list of software application details. The details of application include name, author, version, publishing year , price
+
+#Perform the following with respect to the list of application created.
+
+#a) Display all the details of application by a given author.
+
+#b) Sort the details of application in the increasing order of price.
+
+#c) Display the details of applications published by a given publisher in a given year.
+
+#d) Sort the list of applications in the increasing order of two fields , author and publishing year of the books.
+#Solution:
+#This program is used to create a list of application,
+# to display all the details of application by a given author,
+# to sort the details of application in the increasing order of price,
+# to display the details of applications published by a given publisher in a given year,
+# to sort the list of applications in the increasing order of two fields , author and publishing year of the books.
+print("Enter the below details to create the database...")
+print("Enter the details must be separated by spaces....")
+print("The program will ask you for Author name/anything, just give the input of the data in the same line and each of the input(name/other) data must be separated by space...")
+print("For example:\n If it shown as , Enter the Author names : enter the input like:: ""Shakespeare Henry Faulker JaneAusten"", if you entered all the data that you had means just click Enter to move to next process ")
+print("Confirm that your enter the data in an order and enter the same number of data in all blocks...")
 i = 0
 j = 1
 k = 1
@@ -14,10 +37,13 @@ Published_year = input4_string.split()
 a = input4_string.split()
 Book_cost = input5_string.split()
 b = input5_string.split()
-print(len(Published_year))
 
 print(
-    "Enter 1 to Display all the details of application by a given author\nEnter 2 to Sort the details of application in the increasing order of price\nEnter 3 to Display the details of applications published by a given publisher in a given year\nEnter 4 to Sort the list of applications in the increasing order of two fields , author and publishing year of the books\nEnter 5 to Exit")
+    "Enter 1 to Display all the details of application by a given author\n"
+    "Enter 2 to Sort the details of application in the increasing order of price\n"
+    "Enter 3 to Display the details of applications published by a given publisher in a given year\n"
+    "Enter 4 to Sort the list of applications in the increasing order of two fields , author and publishing year of the books\n"
+    "Enter 5 to Exit")
 while k == 1:
     choice = int(input('Enter the choice:'))
     Book_cost = input5_string.split()
@@ -34,7 +60,6 @@ while k == 1:
                 print("No Books available...")
 
     if choice == 2:
-        m = 1
         for i in range(0, len(Book_cost)):
             Book_cost[i] = int(Book_cost[i])
             b[i] = int(b[i])
@@ -51,9 +76,7 @@ while k == 1:
                         j] + ',Book_version:' + Book_version[j] + ',Published_year:' +
                           Published_year[j]+'\nBook_cost:' )
                     print( Book_cost[j])
-                    m = 0
-                elif m == 1 and i == len(Book_cost) - 1:
-                    print("No Books available...")
+
     if choice == 3:
         m = 1
         f = input("Enter the Author name:")
@@ -65,7 +88,7 @@ while k == 1:
                         i] + ',Book_version:' + Book_version[i] + ',Published_year:' +
                           Published_year[i] + ',Book_cost:' + Book_cost[i])
                     m = 0
-            elif m == 1 and i == len(Author_name):
+            elif m == 1 and i == len(Author_name)-1:
                 print("No Books available...")
 
     if choice == 4:
@@ -85,7 +108,8 @@ while k == 1:
                             j] + ',Book_version:' + Book_version[j] + ',Published_year:' +
                               Published_year[j] + ',Book_cost:' + Book_cost[j])
                         m = 0
-                elif m == 1 and i == len(Published_year):
+                elif m == 1 and i == len(Published_year)-1:
                     print("No Books available...")
     if choice == 5:
         exit()
+
